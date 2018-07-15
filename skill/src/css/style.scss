@@ -1,0 +1,14 @@
+@charset "UTF-8";
+@import "./mixin.scss";
+*{
+    margin:0;padding:0;box-sizing:border-box;
+}
+html,body{
+    @include num(100%,100%);
+}
+body{
+    #{$bj}:#ccc;
+}
+ul,ol{list-style:none;}
+::-webkit-input-placeholder{color:#333;}
+#reactRoot{@include num(100%,100%)}
