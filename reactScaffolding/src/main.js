@@ -1,5 +1,0 @@
-import "babel-runtime/regenerator"
-import "./index.html"
-import "./App.jsx"
-import "./css/style.scss"
-import "./js/script.js"

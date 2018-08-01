@@ -1,0 +1,1 @@
+console.log("helloworld","你好世界");
