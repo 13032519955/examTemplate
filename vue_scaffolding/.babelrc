@@ -1,0 +1,17 @@
+{
+    "presets":[
+        [
+            "env",
+            {
+                "browsers":{
+                    "targets":["last 2 versions"],
+                    "debug":true
+                }
+            }
+        ],
+        "babel-preset-stage-2"
+    ],
+    "plugins":[
+        "babel-plugin-transform-runtime"
+    ]
+}
