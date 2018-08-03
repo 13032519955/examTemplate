@@ -1,8 +1,11 @@
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const VueLoaderLibPlugin = require("vue-loader/lib/plugin")
 
-let entrance = path.resolve("src/templateSrc/main.js");
+let itemsDir = "learnVuex"; //项目地址 直接修改这里就好
+let entrance = path.resolve(`src/${itemsDir}/main.js`);
+let htmlEntance = path.resolve(`src/${itemsDir}/index.html`)
 let exit = path.resolve("dist");
 
 module.exports = {
@@ -17,7 +20,7 @@ module.exports = {
         rules:[
             {
                 test:/\.css$/,
-                use:["vue-style-loader","style-loader","css-loader"]
+                use:['vue-style-loader','css-loader']
             },
             {
                 test:/\.scss$/,
@@ -52,9 +55,10 @@ module.exports = {
         ]
     },
     plugins:[
+        new VueLoaderLibPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
-            template:path.resolve("src/templateSrc/index.html"),
+            template:htmlEntance,
             filename:"index.html",
         })
     ],

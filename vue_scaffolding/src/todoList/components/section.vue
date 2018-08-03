@@ -7,7 +7,7 @@
                 <span>删除</span>
             </p>
             <div>已删除:</div>
-            <p v-for="(value,i) in removeData">
+            <p v-for="(value,i) in removeData" :key="10000+i">
                 {{value}}
              
             </p>

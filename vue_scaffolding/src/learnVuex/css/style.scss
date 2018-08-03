@@ -1,0 +1,7 @@
+@charset "UTF-8";
+@import "./global.scss";
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{@include num(100%,100%)};
+ul,ol{
+    list-style:none;
+}

@@ -12,6 +12,12 @@
 		name: 'App',
 		components:{
 			Header,Section
+		},
+		methods:{
+			add(){
+				this.$store.stete.arr
+
+			}
 		}
 
 	}

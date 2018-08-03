@@ -1,21 +1,24 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from 'vue'
-import App from './App'
-import router from './router'
+import "babel-runtime/regenerator"
+import "./index.html"
 import "./style.scss"
+
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router/index.js'
+
 import Vuex from  "vuex"
 
 Vue.use(Vuex);
-console.log(Vuex);
+
 const store = new Vuex.Store({
 	state:{
-		arr:[],
+		arr:[1,2],
 		removeArr:[]
 		//唯一数据源
 	},
 	getters:{
 		//获取属性的状态
+		add(state){}
 	},
 	mutations:{
 		//改变属性的状态 相当于 react的 reducer
@@ -35,13 +38,9 @@ const store = new Vuex.Store({
 	}
 })
 
-Vue.config.productionTip = false;
-
-/* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  store,
-  router,
-  components: { App },
-  template: '<App/>'
+	el:'#vueRoot',
+	store,
+	router,
+	render:h=>h(App)
 })
